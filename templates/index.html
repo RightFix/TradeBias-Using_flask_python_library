@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Bias</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header-section">
+            <h1 class="page-title">Trade Bias</h1>
+            <p class="subtitle">Be A Step Ahead</p>
+        </header>
+        
+        <div class="table-card">
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Crypto Currency</th>
+                            <th>Strength</th>
+                            <th>Trade Condition</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for crypto, strength, condition, time in zip_data %}
+                        <tr>
+                            <td>{{ crypto }}</td>
+                            <td>{{ strength }}</td>
+                            <td>{{ condition }}</td>
+                            <td>{{ time }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <form class="action-form" action="{{ url_for('button_action') }}" method="post">
+            <button class="action-button" type="submit">Click Here</button>
+        </form>
+    </div>
+</body>
+</html>
