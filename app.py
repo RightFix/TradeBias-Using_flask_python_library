@@ -57,5 +57,5 @@ def button_action():
     
 # Run the app if the script is executed directly
 
-app.run(debug=True)
+app.run(debug=False)
 
