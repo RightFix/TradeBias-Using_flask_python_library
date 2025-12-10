@@ -5,7 +5,7 @@ class BiasClass(HTTP):
     """
     This class is used to get the bias count and number of buy and sell candles
     """
-
+    print("Bias.py loaded")
     def __init__(self, *args, **kwargs):
         super().__init__()
 
@@ -18,10 +18,10 @@ class BiasClass(HTTP):
             demo=True,
             timeout=3600,
             force_retry=True,
-            api_key="3p3uITuUg1PFZQZiw0",
-            api_secret="N5kaK08auFJ9d531AnYKsmGNtrDJOrlh1tee",
+            api_key="a3qAvmiElw72bz8taZ",
+            api_secret="tIs9pByVFTsWlwTrzaxoKAdcwGhIfSc4HSzD",
         )
-
+        print(self.session.get_server_time())
         # coins information
         self.crypto_data = {
             self.crypto[y]: self.session.get_kline(
