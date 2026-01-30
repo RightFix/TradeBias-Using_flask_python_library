@@ -21,7 +21,7 @@ class BiasClass(HTTP):
             api_key="a3qAvmiElw72bz8taZ",
             api_secret="tIs9pByVFTsWlwTrzaxoKAdcwGhIfSc4HSzD",
         )
-        print(self.session.get_server_time())
+        
         # coins information
         self.crypto_data = {
             self.crypto[y]: self.session.get_kline(
